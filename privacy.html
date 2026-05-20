@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NoiseProof — Privacy Policy</title>
+<style>
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: #0a0b0d; color: #f4f4f6; line-height: 1.6; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px; }
+  h1 { font-size: 36px; margin-bottom: 8px; }
+  h2 { font-size: 20px; margin-top: 32px; }
+  p, li { color: #cbd0d8; }
+  a { color: #ff9c41; }
+  .muted { color: #8a90a0; font-size: 14px; }
+  footer { margin-top: 64px; color: #8a90a0; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Privacy Policy</h1>
+<p class="muted">Effective 2026-05-20.</p>
+
+<h2>1. Summary</h2>
+<p>NoiseProof does not collect, transmit, sell, or share personal information. Every recording, dB reading, GPS fix, and evidence PDF stays on the device under <code>NSFileProtectionComplete</code> unless the user explicitly chooses to share or sync.</p>
+
+<h2>2. What stays on your device</h2>
+<ul>
+  <li>Microphone audio (AAC, lossless).</li>
+  <li>Per-100 ms sample stream: dB(A), peak frequency, vibration magnitude.</li>
+  <li>Optional GPS fix and reverse-geocoded address.</li>
+  <li>Generated evidence PDFs and their SHA-256 sidecars.</li>
+</ul>
+
+<h2>3. What we do not collect</h2>
+<ul>
+  <li>No analytics, no telemetry, no crash-reporting SDK.</li>
+  <li>No third-party SDKs of any kind. The binary links only Apple system frameworks.</li>
+  <li>No advertising identifier (IDFA). NoiseProof does not request App Tracking Transparency.</li>
+</ul>
+
+<h2>4. Network calls the app makes</h2>
+<ul>
+  <li><strong>Apple StoreKit</strong> for subscription verification.</li>
+  <li><strong>time.apple.com (SNTP, UDP 123)</strong> once on launch, to detect device-clock drift so the evidence PDF can flag tampered system time. No payload other than the standard 48-byte SNTP packet is exchanged.</li>
+  <li><strong>Apple MapKit + CoreLocation</strong> for map tiles and reverse geocoding when GPS is enabled.</li>
+</ul>
+
+<h2>5. iCloud sync (Pro+, optional)</h2>
+<p>Pro+ subscribers can opt into iCloud sync of the evidence library. The data is stored in the user's private iCloud database and is end-to-end encrypted by Apple. NoiseProof cannot read it server-side because there is no server-side.</p>
+
+<h2>6. Recording-law disclosure</h2>
+<p>The app shows a recording-law warning on first launch and on the last page of every evidence PDF. Recording laws vary by jurisdiction. Several U.S. states require all parties to consent before private conversations may be recorded. You are responsible for confirming local law and for consulting a licensed attorney.</p>
+
+<h2>7. Children</h2>
+<p>NoiseProof is not directed at children under 13 and does not knowingly collect data from anyone.</p>
+
+<h2>8. Changes</h2>
+<p>If this policy changes, the new version is published at this URL with a fresh effective date.</p>
+
+<h2>9. Contact</h2>
+<p>Zhang Jiahao — <a href="mailto:jasperabundant@gmail.com">jasperabundant@gmail.com</a></p>
+
+<footer>© 2026 Zhang Jiahao. NoiseProof is informational and does not provide legal advice.</footer>
+
+</div>
+</body>
+</html>
