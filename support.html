@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NoiseProof — Support</title>
+<style>
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: #0a0b0d; color: #f4f4f6; line-height: 1.6; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px; }
+  h1 { font-size: 36px; margin-bottom: 8px; }
+  h2 { font-size: 20px; margin-top: 32px; }
+  details { background: #181c22; border-radius: 12px; padding: 14px 18px; margin: 8px 0; border: 1px solid rgba(255,255,255,0.06); }
+  summary { font-weight: 600; cursor: pointer; }
+  p, li { color: #cbd0d8; }
+  a { color: #ff9c41; }
+  footer { margin-top: 64px; color: #8a90a0; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Support</h1>
+<p>Email <a href="mailto:jasperabundant@gmail.com">jasperabundant@gmail.com</a> — we respond within 1–2 business days.</p>
+
+<h2>Frequently asked questions</h2>
+
+<details>
+  <summary>Is the recording really not uploaded anywhere?</summary>
+  <p>Correct. The audio file is written into the app sandbox under <code>NSFileProtectionComplete</code> and never leaves the device unless you share it manually. The app has no server. If you enable iCloud sync (Pro+) the file is replicated to your private iCloud database with Apple's end-to-end encryption — NoiseProof cannot read it either.</p>
+</details>
+
+<details>
+  <summary>How accurate is the dB(A) reading?</summary>
+  <p>Approximately ±3 dB(A) versus an ANSI Class 2 sound-level meter, depending on your iPhone model. The app uses a per-model calibration table. Stated tolerance is printed on every evidence PDF.</p>
+</details>
+
+<details>
+  <summary>Can I use the PDF in court?</summary>
+  <p>NoiseProof does not give legal advice and does not guarantee admissibility. Whether a court accepts the PDF depends on the jurisdiction, the case, the opposing party, and (most importantly) your attorney. The PDF includes a SHA-256 chain-of-custody footer and the methodology section so your attorney can argue the record's integrity.</p>
+</details>
+
+<details>
+  <summary>What about recording laws?</summary>
+  <p>Several U.S. states require all parties to consent before private conversations may be recorded. Ambient environmental noise is generally treated differently, but the line is fuzzy if voices are intelligible in the audio. Consult a licensed attorney before sharing audio of any private conversation. The app shows this warning on first launch and on every evidence PDF.</p>
+</details>
+
+<details>
+  <summary>How do I cancel my subscription?</summary>
+  <p><em>Settings → [Your Name] → Subscriptions → NoiseProof → Cancel Subscription.</em> Free trials convert to paid subscriptions unless cancelled at least 24 hours before the trial ends.</p>
+</details>
+
+<details>
+  <summary>How do I verify a PDF wasn't modified?</summary>
+  <p>Open the file in NoiseProof → Settings → "Verify a NoiseProof PDF". The app re-computes SHA-256 over the PDF body and compares it with the <code>.sha256</code> sidecar produced at export. A mismatch means the PDF was edited after export.</p>
+</details>
+
+<details>
+  <summary>Does the background trigger sentinel record everything?</summary>
+  <p>No. The sentinel runs a low-power audio tap that only flips on the full recorder when a rolling 10-second LAeq crosses your chosen threshold. Idle draw is closer to 3 %/hour than continuous capture's 15 %/hour.</p>
+</details>
+
+<footer>© 2026 Zhang Jiahao.</footer>
+
+</div>
+</body>
+</html>
